@@ -50,6 +50,3 @@ Malaysian pre-university students (SPM/STPM/Matriculation) and their parents who
 - [x] **Executable Pipeline Notebook:** [notebooks/week3_pipeline.ipynb](notebooks/week3_pipeline.ipynb)
 - [x] **Prepared Outputs:** [data/pipeline_v1/documents/prepared_text.jsonl](data/pipeline_v1/documents/prepared_text.jsonl)
 - [x] **Lineage Manifest:** [data/week3_manifest.json](data/week3_manifest.json)
-
-**Week 3 Reflection & Limitations:**
-During the data preparation pipeline execution, we ingested 5 distinct scholarship documents (PDFs and TXT files) from JPA, MARA, Yayasan Pahang, UTM, and PNB. The comparison between fixed-sized and paragraph-aware chunking was done, and we selected paragraph-aware (chunk size of 500) since the criteria for scholarships have a very well-defined structure and use bullet points, hence fixed-sized chunking was ruining the context. One of the limitations is that our basic PDF parser cannot track exact page numbers, which means our RAG references will use the document name and not the specific page. In addition to that, scanned PDFs without text layers (OCR) will not pass through the ingestion phase.
