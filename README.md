@@ -1,40 +1,55 @@
 # ScholarHelp
 
-> An AI-powered RAG assistant that extracts and compiles scholarship eligibility, deadlines, and benefits from Malaysian public documents to reduce student search fatigue. 
+> An AI-powered scholarship Q&A assistant that helps Malaysian students find and understand public scholarship opportunities through cited, natural-language answers.
 
 ## Problem Statement
-Students in Malaysia suffer from serious information inequality and search fatigue while trying to find scholarship opportunities. The high-value scholarships have a huge number of applicants, while other deserving students do not even know about less-known but equally valuable scholarship opportunities.
+Students in Malaysia face severe information asymmetry and search fatigue when seeking financial aid for higher education. Eligibility criteria are scattered across government portals and university PDFs, making it difficult for students to know what they qualify for. Simple keyword search cannot answer complex, cross-document questions (e.g., matching a student's specific background to nuanced income and CGPA requirements), which is why an AI engineering solution using Retrieval-Augmented Generation (RAG) is necessary to synthesize accurate, cited answers.
 
 ## Evidence of the Problem
-- **Evidence 1:** For Malaysian students, the biggest challenge in getting a scholarship is neither the lack of talent nor meritocracy but awareness. A study showed that in a Sabah school, there were hundreds of students who had the eligibility to get a scholarship, but only five applied. *(Source / citation: Stratsea, "Are Scholarships Out of Reach?" (2026))*
-- **Evidence 2:** There is a lot of "scholarship fatigue" experienced by students. Surveys indicate that 3 out of 4 undergraduate students have abandoned scholarships because of fatigue, and 79% did not apply for a scholarship for which they were eligible because of lack of motivation. Furthermore, 53% mentioned the fear of being scammed as a reason. *(Source / citation: Sallie, "The Scholarship Search Fatigue Report" (2026))*
+- **Evidence 1:** A qualitative study found that despite hundreds of qualified students in a Malaysian school, only five applied for scholarships because counselors lacked scholarship literacy and students lacked role models. *(Source: Stratsea, "Are Scholarships Out of Reach?" 2026)*
+- **Evidence 2:** Surveys show that 3 in 4 undergraduates have given up on scholarships due to exhaustion, and 79% have not applied for a scholarship they were eligible for because the process didn't feel worth the effort. *(Source: Sallie, "The Scholarship Search Fatigue Report," 2026)*
  
 ## Initial Related Work / Existing Approaches
-- **PUENYAI Bot**
-  - *(Source: Ramli, A. A. R. B., Krathu, W., & Bramantoro, A. (2025). PUENYAI Bot: A Retrieval-Augmented LLM Chatbot for University Information Services. 2025 7th International Conference on Applied Computational Intelligence in Information Systems (ACIIS), 1-6.)* 
-  - **Key limitation:** Concentrates on internal sources of one organization only and does not consolidate external or national scholarships.
-- **Knowledge-Grounded Conversational AI for Scholarship Discovery**
-  -  *(Source: Roumani, A. M., & Liang, D. (2026). Knowledge-Grounded Conversational AI for Scholarship Discovery. In K. Daimi & A. Alsadoon (Eds.), Proceedings of the Fourth International Conference on Advances in Computing Research, ACR'26 (pp. 93-107). Springer.)* 
-  - **Key limitation:** Implemented for universities in Kuwait and not adapted for the Malaysian scholarship landscape or local public documents.
-- **EduAdvisor (Malaysia)**
-  -  *(Source: EduAdvisor. (2026). About Us. Retrieved from https://eduadvisor.my/about-us)* 
-  - **Key limitation:** It is an AI lead generation system which is connected to the partner institutions. It is not an independent AI assistant which responds to policy questions and helps understand eligibility criteria.
+- **PUENYAI Bot** *(Ramli, Krathu, & Bramantoro, 2025 - ACIIS Conference)* + **Key limitation:** Designed for a single institution's internal sources; does not aggregate or address external, nationwide scholarship databases.
+- **Knowledge-Grounded Conversational AI for Scholarship Discovery** *(Roumani & Liang, 2026 - ACR'26 Proceedings)* + **Key limitation:** While using a RAG architecture for scholarships, the implementation specifically targets universities in Kuwait and lacks grounding in Malaysian public documents.
+- **EduAdvisor** *(EduAdvisor, 2026)* + **Key limitation:** A commercial, human-driven lead-generation platform tied to partner institutions. It functions as a sales funnel for specific universities rather than an independent, open-domain AI grounded in official government policies.
  
 ## Project Objectives
-- O1: To develop a Retrieval-Augmented Generation (RAG) assistant that is able to extract and compile scholarship eligibility, deadlines, and benefits in the case of Malaysian public documents such as JPA and financial aid books of universities.
-- O2: To evaluate the system's performance against a manually constructed QA dataset (100-200 pairs) focusing on Answer Accuracy, Retrieval Recall, and Hallucination Rate (refusal on unknown queries).
-- O3: To provide an interface that is open in mentioning the source of each piece of information, thereby solving the problem of trust in social media scholar advice.
+- **O1:** To develop a RAG-based AI assistant that accurately extracts and synthesizes scholarship eligibility, deadlines, and benefits from Malaysian public documents.
+- **O2:** To evaluate the system's performance against a manually constructed QA dataset focusing on Answer Accuracy, Retrieval Recall, and Hallucination Rate.
+- **O3:** To provide a transparent user interface that cites the source document for every answer, mitigating trust issues and fear of scams.
 
 ## Target Users
-- **Primary:** Malaysian pre-university students such as SPM, STPM or Matriculation and their parents who lack access to school counselors.
-- **Secondary:** University students seeking external funding for their undergraduate or postgraduate studies.
+Malaysian pre-university students (SPM/STPM/Matriculation) and their parents who lack access to dedicated school counselors, as well as university students seeking external funding for their studies.
 
 ## Data Sources
-- Source 1: JPA Official Sponsorship Portal (Portal Penajaan JPA) — URL: `https://penajaan.jpa.gov.my/`
-- Source 2: Ministry of Higher Education (KPT) Scholarship Portal — URL: `https://biasiswa.mohe.gov.my/`
-- Source 3: UTM Scholarship and Financial Aid (Admission Portal) — URL: `https://admission.utm.my/scholarship-and-financial-aid/`
+- Source 1: JPA Official Sponsorship Portal (Program Ijazah Dalam Negara) — `https://penajaan.jpa.gov.my/`
+- Source 2: MARA Scholarship Guidelines — `https://www.mara.gov.my/`
+- Source 3: Yayasan Pahang Scholarship — `https://www.yayasanpahang.gov.my/`
+- Source 4: UTM Scholarship and Financial Aid (UTM ASCEND) — `https://admission.utm.my/scholarship-and-financial-aid/`
+- Source 5: Anugerah Biasiswa Merdeka PNB — `https://www.pnb.com.my/`
+
+---
 
 ## Weekly Progress
-| Week | Focus | Deliverable | Status |
-|------|-------|-------------|--------|
-| W1 | System map + project scope | README + docs | ✅ |
+
+### Week 1: System Map & Project Scope
+- [x] Initial repository structure
+- [x] Project scope and observation sheets
+- [x] V1 System Map
+
+### Week 2: Requirements & Architecture
+- [x] Functional (FR), Non-Functional (NFR), and Responsible AI (RAI) requirements
+- [x] Evaluation criteria defined
+- [x] V1 Architecture Diagram and Decisions (ADR)
+
+### Week 3: Data Pipeline (V1)
+- [x] **Data Inventory:** [docs/week3_data_inventory.md](docs/week3_data_inventory.md)
+- [x] **Pipeline Decisions & Stage Contracts:** [docs/week3_pipeline_decisions.md](docs/week3_pipeline_decisions.md)
+- [x] **Pipeline Diagram:** [docs/week3_pipeline_diagram.png](docs/week3_pipeline_diagram.png)
+- [x] **Executable Pipeline Notebook:** [notebooks/week3_pipeline.ipynb](notebooks/week3_pipeline.ipynb)
+- [x] **Prepared Outputs:** [data/pipeline_v1/documents/prepared_text.jsonl](data/pipeline_v1/documents/prepared_text.jsonl)
+- [x] **Lineage Manifest:** [data/week3_manifest.json](data/week3_manifest.json)
+
+**Week 3 Reflection & Limitations:**
+During the data preparation pipeline execution, we ingested 5 distinct scholarship documents (PDFs and TXT files) from JPA, MARA, Yayasan Pahang, UTM, and PNB. The comparison between fixed-sized and paragraph-aware chunking was done, and we selected paragraph-aware (chunk size of 500) since the criteria for scholarships have a very well-defined structure and use bullet points, hence fixed-sized chunking was ruining the context. One of the limitations is that our basic PDF parser cannot track exact page numbers, which means our RAG references will use the document name and not the specific page. In addition to that, scanned PDFs without text layers (OCR) will not pass through the ingestion phase.
