@@ -1,0 +1,61 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-02T02:08:54.573759+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "source_filename": "Anugerah Biasiswa Merdeka PNB.txt",
+      "source_sha256": "89b983458f6ce4af86b8741459187c75a5f085e14a9d10cc90f20b50efafb248",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "40d1f061f25d6117bc2b45da23dc2b6a7144434d2bfe8b36dd22f662d115ce58",
+      "processing_note": "paragraph-aware-char-500",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S02",
+      "source_filename": "Biasiswa MARA 2026.pdf",
+      "source_sha256": "f9f160507995a891bf8cd2cd46dc12a20e627e644bb6dfc26bd61e1e3541b427",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "40d1f061f25d6117bc2b45da23dc2b6a7144434d2bfe8b36dd22f662d115ce58",
+      "processing_note": "paragraph-aware-char-500",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S03",
+      "source_filename": "Biasiswa Yayasan Pahang 2026.pdf",
+      "source_sha256": "7a5a7763a17cb06f2793f631dde3b6bbe80c463d2eac297366c6d0652fd1721b",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "40d1f061f25d6117bc2b45da23dc2b6a7144434d2bfe8b36dd22f662d115ce58",
+      "processing_note": "paragraph-aware-char-500",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S04",
+      "source_filename": "INFORMASI-TENTANG-BIASISWA-UTM-ASCEND.pdf",
+      "source_sha256": "5c08dbe40111f9554bdaddd2a7d778b1c59811ee490cf968362eba087d74b6ed",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "40d1f061f25d6117bc2b45da23dc2b6a7144434d2bfe8b36dd22f662d115ce58",
+      "processing_note": "paragraph-aware-char-500",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S05",
+      "source_filename": "Program Ijazah Dalam Negara (PIDN).txt",
+      "source_sha256": "93b6f4969141ccaf9609ad082cb8b6b643f4ecfc998ef0f4ce2a9b6c776d58a2",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "40d1f061f25d6117bc2b45da23dc2b6a7144434d2bfe8b36dd22f662d115ce58",
+      "processing_note": "paragraph-aware-char-500",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    }
+  ]
+}

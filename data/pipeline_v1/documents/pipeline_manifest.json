@@ -1,0 +1,72 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-02T02:13:59.852417+00:00",
+  "data_type": "documents",
+  "configuration": {
+    "chunk_size": 500,
+    "method": "paragraph-aware"
+  },
+  "processing_method": "Multi-file PDF/TXT Extraction and Chunking",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/Anugerah Biasiswa Merdeka PNB.txt",
+      "sha256": "89b983458f6ce4af86b8741459187c75a5f085e14a9d10cc90f20b50efafb248"
+    },
+    {
+      "path": "/content/week3_project/data/raw/Biasiswa MARA 2026.pdf",
+      "sha256": "f9f160507995a891bf8cd2cd46dc12a20e627e644bb6dfc26bd61e1e3541b427"
+    },
+    {
+      "path": "/content/week3_project/data/raw/Biasiswa Yayasan Pahang 2026.pdf",
+      "sha256": "7a5a7763a17cb06f2793f631dde3b6bbe80c463d2eac297366c6d0652fd1721b"
+    },
+    {
+      "path": "/content/week3_project/data/raw/INFORMASI-TENTANG-BIASISWA-UTM-ASCEND.pdf",
+      "sha256": "5c08dbe40111f9554bdaddd2a7d778b1c59811ee490cf968362eba087d74b6ed"
+    },
+    {
+      "path": "/content/week3_project/data/raw/Program Ijazah Dalam Negara (PIDN).txt",
+      "sha256": "93b6f4969141ccaf9609ad082cb8b6b643f4ecfc998ef0f4ce2a9b6c776d58a2"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/Anugerah Biasiswa Merdeka PNB.txt",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl"
+    },
+    {
+      "source": "/content/week3_project/data/raw/Biasiswa MARA 2026.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl"
+    },
+    {
+      "source": "/content/week3_project/data/raw/Biasiswa Yayasan Pahang 2026.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl"
+    },
+    {
+      "source": "/content/week3_project/data/raw/INFORMASI-TENTANG-BIASISWA-UTM-ASCEND.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl"
+    },
+    {
+      "source": "/content/week3_project/data/raw/Program Ijazah Dalam Negara (PIDN).txt",
+      "output": "/content/week3_project/data/pipeline_v1/documents/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "file_count": 5,
+    "status": "All passed"
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "450765570c834401981dd6b25da2031c83654ac3881041eee8ec76be149b5b90"
+    ],
+    "output_bytes": [
+      43219
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified — check before sharing"
+}
