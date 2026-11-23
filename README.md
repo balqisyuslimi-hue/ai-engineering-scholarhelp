@@ -50,3 +50,8 @@ Malaysian pre-university students (SPM/STPM/Matriculation) and their parents who
 - [x] **Executable Pipeline Notebook:** [notebooks/week3_pipeline.ipynb](notebooks/week3_pipeline.ipynb)
 - [x] **Prepared Outputs:** [data/pipeline_v1/documents/prepared_text.jsonl](data/pipeline_v1/documents/prepared_text.jsonl)
 - [x] **Lineage Manifest:** [data/week3_manifest.json](data/week3_manifest.json)
+
+### Week 4: Data Quality & Responsible Practices
+- [x] **Data Quality & Bias Report:** [docs/week4_data_quality_report.md](docs/week4_data_quality_report.md)
+- **Quality-Gate Decision:** GO WITH CONDITIONS
+- **Outstanding Actions:** Fix `\u0000` PDF extraction errors (39 records) and improve chunk splitting before Topic 5.
